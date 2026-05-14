@@ -63,7 +63,7 @@ Reconnect the camera after applying the rule.
 Move to the release directory:
 
 ```bash
-cd DVS_Viewer_Linux_x64
+cd DVS_Viewer/Linux/x64
 ```
 
 Allow execution if needed:
