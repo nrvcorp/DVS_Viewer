@@ -37,6 +37,9 @@ This release package already includes the required runtime files, including Qt r
 
 Connect the DVS device to the PC by USB, then run:
 
+**Windows PowerShell**
+
 ```powershell
+cd Windows\x64
 .\DVS_Viewer_FX20.exe
 ```

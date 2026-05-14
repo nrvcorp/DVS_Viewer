@@ -8,6 +8,8 @@ The viewer can display live DVS data, save unparsed raw data, save parsed frame 
 
 Install the required Linux packages:
 
+**Linux Bash**
+
 ```bash
 sudo apt update
 sudo apt install -y \
@@ -19,6 +21,8 @@ sudo apt install -y \
 ```
 
 Optional packages:
+
+**Linux Bash**
 
 ```bash
 sudo apt install -y nautilus dbus-x11
@@ -33,6 +37,8 @@ sudo apt install -y nautilus dbus-x11
 
 On a native Linux system, connect the camera and check that it is visible:
 
+**Linux Bash**
+
 ```bash
 lsusb
 ```
@@ -45,6 +51,8 @@ CX3  : 04b4:00f1
 ```
 
 If device permission is denied, run once with `sudo` or add a udev rule:
+
+**Linux Bash**
 
 ```bash
 sudo tee /etc/udev/rules.d/99-cypress-dvs.rules >/dev/null <<'EOF'
@@ -62,17 +70,23 @@ Reconnect the camera after applying the rule.
 
 Move to the release directory:
 
+**Linux Bash**
+
 ```bash
 cd DVS_Viewer/Linux/x64
 ```
 
 Allow execution if needed:
 
+**Linux Bash**
+
 ```bash
 chmod +x DVS_Viewer_FX20
 ```
 
 Run the viewer:
+
+**Linux Bash**
 
 ```bash
 ./DVS_Viewer_FX20
@@ -84,6 +98,8 @@ Run the viewer:
 
 If the executable cannot run:
 
+**Linux Bash**
+
 ```bash
 chmod +x DVS_Viewer_FX20
 ```
@@ -92,11 +108,15 @@ chmod +x DVS_Viewer_FX20
 
 If a library cannot be found:
 
+**Linux Bash**
+
 ```bash
 ldd ./DVS_Viewer_FX20
 ```
 
 If needed, run with:
+
+**Linux Bash**
 
 ```bash
 LD_LIBRARY_PATH=. ./DVS_Viewer_FX20
@@ -106,6 +126,8 @@ LD_LIBRARY_PATH=. ./DVS_Viewer_FX20
 
 Install the Qt SVG runtime:
 
+**Linux Bash**
+
 ```bash
 sudo apt install -y libqt6svg6
 ```
@@ -114,11 +136,15 @@ sudo apt install -y libqt6svg6
 
 Install `xdg-open` support:
 
+**Linux Bash**
+
 ```bash
 sudo apt install -y xdg-utils
 ```
 
 If no file manager is available:
+
+**Linux Bash**
 
 ```bash
 sudo apt install -y nautilus
@@ -129,6 +155,8 @@ sudo apt install -y nautilus
 Some WSL or minimal Linux environments may show DBus/GIO warnings when opening file dialogs or directories. If the viewer works normally, these warnings can usually be ignored.
 
 To reduce them:
+
+**Linux Bash**
 
 ```bash
 sudo apt install -y dbus-x11
