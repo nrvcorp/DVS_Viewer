@@ -36,7 +36,7 @@ If an X mark is displayed, an error occurred during the button operation. Restar
 
 If a check mark is displayed, the operation has been completed successfully.
 
-If the viewer still does not operate correctly, please contact us:
+If the viewer still does not operate correctly, please contact : eric.ryu@nrv.kr
 
 ## 1. Live Streaming
 
