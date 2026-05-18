@@ -16,7 +16,7 @@ For Linux environments, see:
 
 ## Viewer Guide
 
-The viewer provides several types of features.
+The viewer provides the following features.
 
 1. [Live Streaming](#1-live-streaming): Connect a camera and view real-time data streaming.
 
@@ -75,7 +75,8 @@ If the setting is applied successfully, a check mark should be displayed as show
 
 Click the Start button to begin streaming.
 
-**Before starting, you can configure the Frame Generation Mode settings. These settings cannot be changed while streaming is running. To change them, click the Stop button to pause streaming,update the settings, and then click Start again to view the image data with the updated settings.**
+> [!NOTE]
+> Before starting, you can configure the Frame Generation Mode settings. These settings cannot be changed while streaming is running. To change them, click the Stop button to pause streaming, update the settings, and then click Start again to view the image data with the updated settings.
 
 ![RealTime_Image](images/RealTime_Image.png)
 
@@ -83,17 +84,17 @@ While the RC1S camera is streaming in real time, you can check the incoming USB 
 
 ## 2. Save DVS Data
 
-DVS Viewer provides two data save modes.
+DVS Viewer provides two data saving modes.
 
-1. Save raw data before data parsing.
+1. Save raw data before parsing.
 
-2. Save images or videos generated after data parsing and after applying the Frame Generation settings.
+2. Save images or videos generated after parsing and applying the Frame Generation settings.
 
 Both save modes are available while streaming is running.
 
 Refer to [Live Streaming](#1-live-streaming) first, then proceed with data saving.
 
-#### 2.1 Save Raw Data
+### 2.1 Save Raw Data
 
 ![Save_process](images/Save_process.png)
 
@@ -105,7 +106,7 @@ The REC area on the right displays how many seconds the data has been recording.
 
 When saving is complete, the Save Complete window appears. The raw data is saved as a `.dvs` file in the `RawDataSave` folder. This `.dvs` file can later be opened in [File Playback](#3-file-playback) mode.
 
-#### 2.2 Save Images or Videos
+### 2.2 Save Images or Videos
 
 While live streaming is running, select the desired mode in the Image/Video Save section of the Device Control Panel, then click the Start Saving button. The data will be saved in the selected mode.
 
@@ -119,11 +120,11 @@ You can run File Playback mode by selecting a saved raw data file or one of the 
 
 To use File Playback, first change the device selection to File Player.
 
-Then, click the Open File button below. File Explorer will open the `RawDataSave` folder.
+Then, click the Open File button. File Explorer will open the `RawDataSave` folder.
 
 ![Change_FilePlayermode](images/Change_FilePlayermode.png)
 
-Select the `.dvs` file you want to open, then click the Open button. The selected file will be registered in the viewer. Verify that the selected file name matches the file that was actually opened.
+Select the `.dvs` file you want to open, then click the Open button. The selected file will be loaded in the viewer. Verify that the selected file name matches the file that was actually opened.
 
 ![OpenFile_playbackmode](images/OpenFile_playbackmode.png)
 
@@ -138,7 +139,8 @@ When TimeStamp mode is selected, the viewer appears as shown below.
 
 This mode may not display correctly if it is changed while the file is playing. Make sure to select the view mode before starting playback.
 
-**If you want to change the view mode, close the file with Close File, open it again with Open File, and then select the desired mode.**
+> [!IMPORTANT]
+> To change the view mode, close the file with Close File, open it again with Open File, and then select the desired mode.
 
 You can also configure the playback speed and choose between Play Once and Repeat. These settings can be changed while the file is playing.
 
@@ -149,7 +151,7 @@ In File Playback mode, the viewer counts the number of frames, the number of eve
 > [!NOTE]
 > Frame Generation Mode is compatible with both [Live Streaming](#1-live-streaming) and [File Playback](#3-file-playback).
 
-### 4. Sensor Register Control [In Progress]
+## 4. Sensor Register Control [In Progress]
 
 In the DVS Sensor Setting panel, you can modify DVS sensor values in real time through I2C and immediately check the resulting changes in the live image.
 
