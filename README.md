@@ -1,8 +1,8 @@
 # DVS Viewer
 
-DVS Viewer is a release package for viewing and working with DVS camera data from NRV hardware cameras.
+DVS Viewer is an application designed to make it easy and convenient to use the Delta Series event cameras developed by Neuro Reality Vision (NRV). It provides essential features for working with the cameras, including real-time streaming, event data visualization, data recording, and playback.
 
-The viewer supports real-time camera streaming, DVS data display, raw data saving, frame image saving, video recording, and playback of saved DVS data.
+For more information about the internal operation of DVS Viewer and the camera control APIs, please refer to the [NRV SDK documentation](https://nrvcorp.github.io/docs/software/get_started/).
 
 ## Environment Setup
 
@@ -16,17 +16,36 @@ For Linux environments, see:
 
 ## Viewer Guide
 
-The viewer provides the following features.
+### Select a Data Source
 
-1. [Live Streaming](#1-live-streaming): Connect a camera and view real-time data streaming.
+After launching DVS Viewer, first select the source from which data will be loaded. Use the **Device** drop-down menu to play previously recorded data or stream live data from a connected Delta camera.
 
-2. [Save DVS Data](#2-save-dvs-data): Save unprocessed raw data, or save processed frame-based images and videos.
+![Select a data source](images/select_data_source.png)
 
-3. [File Playback](#3-file-playback): Play back saved data and check debugging information such as event count, frame rate, and timestamps.
+**1. File Playback Mode**
 
-4. [Sensor Register Control](#4-sensor-register-control-in-progress): Control sensor register values in real time and observe the resulting changes.
+File Player is selected by default. This mode allows you to open and view previously recorded event data without connecting a camera.
 
-For detailed instructions for each item, refer to the linked sections above.
+For detailed instructions, see [File Playback guide](#3-file-playback).
+
+**2. Device Live Streaming Mode**
+
+When a Delta camera is properly connected to the host system, it appears in the **Device** list together with its device information.
+
+Device information is displayed in the following format:
+
+```text
+[Delta-XX] Serial - <Serial Number> - <USB Endpoint>, <Packet Size>
+```
+
+The fields indicate the following:
+
+- `Delta-XX`: The connected Delta camera model
+- `Serial Number`: The unique serial number of the camera
+- `0x81`: The USB endpoint address used for data streaming
+- `1024 Bytes`: The maximum USB transfer packet size
+
+After selecting the connected camera, see the [Live Streaming guide](#1-live-streaming) for instructions on starting a live stream.
 
 ### Before You Start
 
@@ -36,7 +55,7 @@ If an X mark is displayed, an error occurred during the button operation. Restar
 
 If a check mark is displayed, the operation has been completed successfully.
 
-If the viewer still does not operate correctly, please contact : eric.ryu@nrv.kr
+If the viewer still does not operate correctly, please contact : contact@nrv.kr
 
 ## 1. Live Streaming
 
