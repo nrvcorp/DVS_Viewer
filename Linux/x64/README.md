@@ -71,8 +71,8 @@ lsusb
 Expected Cypress device IDs:
 
 ```text
-FX10 : 04b4:00f0
-CX3  : 04b4:00f1
+Delta-01 : 04b4:00f1
+Delta-10 : 04b4:00f0
 ```
 
 If device permission is denied, run once with `sudo` or add a udev rule:
@@ -106,7 +106,7 @@ Allow execution if needed:
 **Linux Bash**
 
 ```bash
-chmod +x DVS_Viewer_FX20
+chmod +x DVS_Viewer
 ```
 
 Run the viewer:
@@ -114,20 +114,11 @@ Run the viewer:
 **Linux Bash**
 
 ```bash
-./DVS_Viewer_FX20
+./DVS_Viewer
 ```
 
 ## Troubleshooting
 
-### Permission denied
-
-If the executable cannot run:
-
-**Linux Bash**
-
-```bash
-chmod +x DVS_Viewer_FX20
-```
 
 ### Shared library not found
 
@@ -136,7 +127,7 @@ If a library cannot be found:
 **Linux Bash**
 
 ```bash
-ldd ./DVS_Viewer_FX20
+ldd ./DVS_Viewer
 ```
 
 If needed, run with:
@@ -144,7 +135,7 @@ If needed, run with:
 **Linux Bash**
 
 ```bash
-LD_LIBRARY_PATH=. ./DVS_Viewer_FX20
+LD_LIBRARY_PATH=. ./DVS_Viewer
 ```
 
 ### OpenCV version mismatch (`libopencv_*.so.4.5d` not found)
@@ -195,7 +186,7 @@ Then run the viewer again:
 **Linux Bash**
 
 ```bash
-./DVS_Viewer_FX20
+./DVS_Viewer
 ```
 
 ### UI icons are missing
@@ -236,5 +227,5 @@ To reduce them:
 
 ```bash
 sudo apt install -y dbus-x11
-dbus-run-session ./DVS_Viewer_FX20
+dbus-run-session ./DVS_Viewer
 ```
