@@ -59,7 +59,7 @@
 20:3219=05 // DTAG_AY_RST_GAP_r
 20:321A=07 // DTAG_APS_RST_r
 20:321C=02 // DTAG_COL_MARGIN_r
-20:320C=1D // [6] : DTAG_FREE_RUN_MODE_r, [5] : DTAG_MASK_FIRST_FRAME_r, [1] : DTAG_GRST_MODE_r, [0] : DTAG_GH_MODE_r
+20:320C=7D // [6] : DTAG_FREE_RUN_MODE_r, [5] : DTAG_MASK_FIRST_FRAME_r, [1] : DTAG_GRST_MODE_r, [0] : DTAG_GH_MODE_r
 20:321D=00 // DTAG_FRM_MAGRIN_r_MSB
 20:321E=02 // DTAG_FRM_MAGRIN_r_LSB : 1LSB x 2^12 x Event Clock period
 //////////////////////////////////////////////////////////////////

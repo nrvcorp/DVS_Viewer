@@ -172,7 +172,6 @@ However, it is not recommended because collecting statistics during live streami
 
 After the sensor settings have been applied to a Delta camera, the DVS Sensor Settings Panel on the right side of the screen becomes enabled. This panel provides various controls for configuring the DVS sensor.
 
-![dvs_sensor_setting_panel](images/dvs_sensor_setting_panel.png)
 
 #### 1. Sensitivity
 
