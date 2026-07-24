@@ -230,12 +230,38 @@ This is a feature specific to NRV DVS sensors. The default format is `MGROUP`. I
 
 Provides direct control over sensor registers that are not covered by the settings above. Through I²C communication, you can fine-tune individual sensor registers, perform Read-Back Tests to verify that settings were applied correctly, and access other advanced sensor controls.
 
-## 5. MenuBar 설명
+## 5. MenuBar
 
 #### 1. Styles 
 
-Viewer의 UI 테마를 고르는 메뉴 바 입니다. 기본 모드는 Dark Mode 이며, Light Mode로 UI 테마를 변경할 수도 있습니다.
+Use this menu to select the Viewer’s UI theme. Dark Mode is enabled by default, but you can switch to Light Mode at any time.
 
 #### 2. Stereo
 
-추후에 정식 출시 될, Stereo Delta camera(DVS 2개) 와 Delta-Sigma Camera(DVS+CIS) 를 위한 메뉴바 입니다. 카메라 단독으로 USB  
+This menu is reserved for upcoming stereo camera products, including the Stereo Delta Camera (dual DVS sensors) and the Delta-Sigma Camera (DVS + CIS).
+
+#### 3. Debug
+
+The Debug menu allows you to receive and inspect one data packet at a time instead of using continuous streaming. It provides detailed information about frame, column, and event data.
+
+This feature is unavailable while streaming is active. To use it:
+
+1. Apply the sensor settings and ensure that streaming is stopped.
+
+2. Click Read 1 Buffer to receive 65,504 bytes of raw data.
+
+3. Click Parsing to parse the raw data and display it in a user-friendly format.
+
+#### 4. Export
+
+The Export menu converts `.dvs` raw data into a commonly used large-scale event-data format.
+
+Select the `.dvs` file to convert under Raw File, then specify the destination path and output filename under Save File.
+
+Currently, only `HDF5 (*.h)` output is supported. Additional export formats will be added in future releases.
+
+Click Export to begin the conversion. You can monitor its status using the progress bar.
+
+## 6. Contact
+
+If you have any questions about the Viewer or encounter any issues, please contact us at `contact@nrv.kr`.
