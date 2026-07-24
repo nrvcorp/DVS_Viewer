@@ -1,6 +1,6 @@
 # DVS Viewer for Windows
 
-DVS Viewer is a Windows application for real-time streaming from NRV hardware cameras, including `RC1S_CX3` and `RC1S_FX10`.
+DVS Viewer is a Windows application for real-time streaming from NRV hardware cameras, including Delta-Series camera.
 
 The viewer can display live DVS data, save unparsed raw data, save parsed frame images, record video output, and play back previously saved DVS data.
 
@@ -8,7 +8,7 @@ The viewer can display live DVS data, save unparsed raw data, save parsed frame 
 
 To connect a DVS device on Windows, the Cypress USB driver must be installed.
 
-This release package already includes the required runtime files, including Qt runtime DLLs, OpenCV DLLs, and the DVS SDK DLL. Keep the included files and folders in the same directory as `DVS_Viewer_FX20.exe`.
+This release package already includes the required runtime files, including Qt runtime DLLs, OpenCV DLLs, and the DVS SDK DLL. Keep the included files and folders in the same directory as `DVS_Viewer.exe`.
 
 ## Installing Drivers
 
@@ -20,7 +20,7 @@ This release package already includes the required runtime files, including Qt r
 
 2. Connect the USB camera to the PC.
 
-3. Open Device Manager and find the connected `CX3` or `FX10` device.
+3. Open Device Manager and find the connected `Delta-01` or `Delta-10` device.
 
 4. Update the driver manually.
 
@@ -41,5 +41,5 @@ Connect the DVS device to the PC by USB, then run:
 
 ```powershell
 cd Windows\x64
-.\DVS_Viewer_FX20.exe
+.\DVS_Viewer.exe
 ```
