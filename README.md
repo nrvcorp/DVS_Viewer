@@ -74,7 +74,7 @@ In the Settings panel, apply the setting file that matches the device, then veri
 When a camera is selected, the appropriate settings for that camera are loaded automatically. Simply click the Apply button to apply them.
 
 - `Delta_01_1000FPS.txt`: 1000 Frame Rate Setting (Delta-01 Only)
-- `Delta_10_2000FPS.txt`: 2000 Frame Rate Setting (Delta-10 Only)
+- `Delta_10_2000FPS_Single.txt`: 2000 Frame Rate Setting (Delta-10 Only)
 
 **Caution: Applying a settings file whose camera name does not match the selected camera may cause an error. If an error occurs, disconnect and reconnect the camera’s USB cable.**
 
