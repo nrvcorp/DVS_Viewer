@@ -10,9 +10,9 @@
 20:300c=00 // STREAM_OUT_MODE_r(0 : MIPI, 1 : PARALLEL)
 20:30a1=00 // [0] : OUTIF_PARA_ENABLE
 
-20:3070=03 // PLL_P
-20:3071=00 // PLL_M_MSB
-20:3072=9D // PLL_M_LSB
+20:3070=04 // PLL_P
+20:3071=01 // PLL_M_MSB
+20:3072=2C // PLL_M_LSB
 20:3073=00 // PLL_S
 
 20:3079=61 // [7:4] PLL_DIV_G , [3:0] PLL_DIV_DBR
@@ -25,7 +25,7 @@
 ///////////////////////////////////
 20:30a5=00 // DPHY_PLL_PMS
 20:30a6=67 // DPHY_PLL_PMS
-20:30a7=D1 // DPHY_PLL_PMS
+20:30a7=89 // DPHY_PLL_PMS
 ///////////////////////////////////
 
 20:3080=3F // CLOCK_ENABLE ([0] : MULTICLK_ENABLE)
@@ -61,24 +61,25 @@
 //////////////////////////////////////////////////////////////////
 //////////////     Scan Rate Setting       ///////////////////////
 //////////////////////////////////////////////////////////////////
-20:320C=5D
+20:320C=1D
 
-20:3210=1E
+20:3210=19
 20:3211=00
-20:3212=07
-20:3213=1D
+20:3212=00
+20:3213=04
 20:3214=00
 20:3215=00
 
-20:3216=07 // DTAG_SELX_r
-20:3217=04 // DTAG_SENSE_r
-20:3218=18 // DTAG_AY_r
-20:3219=1B // DTAG_AY_RST_GAP_r
-20:321A=0E // DTAG_APS_RST_r
-20:321C=0B // DTAG_COL_MARGIN_r
+20:3216=1A // DTAG_SELX_r
+20:3217=1B // DTAG_SENSE_r
+20:3218=0C// DTAG_AY_r
+20:3219=14 // DTAG_AY_RST_GAP_r
+20:321A=1C // DTAG_APS_RST_r
+20:321C=02 // DTAG_COL_MARGIN_r
 
-20:321D=00 // DTAG_FRM_MAGRIN_r_MSB
-20:321E=02 // DTAG_FRM_MAGRIN_r_LSB : 1LSB x 2^12 x Event Clock period
+20:321D=00 // DTAG_FRM_MARGIN_r_MSB
+20:321E=02 // DTAG_FRM_MARGIN_r_LSB
+
 
 //////////////////////////////////////////////////////////////////
 //////////////        Analog Setting       ///////////////////////
@@ -86,11 +87,17 @@
 20:0157=1F // CRGS Setting
 20:0166=0F // REG_DIV_BCM_BOT_UNIT_AMP
 20:0167=07 // REG_DIV_BCM_BOT_UNIT_ON
-20:0168=0F // REG_DIV_BCM_BOT_UNIT_OFF
+20:0168=1F // REG_DIV_BCM_BOT_UNIT_OFF
 
 //////////////////////////////////////////////////////////////////
 //////////////        TimeStamp Setting    /////////////////////
 //////////////////////////////////////////////////////////////////
+
+//20:32B1=00 // TSTAMP_SUB_UNIT_VAL_r_MSB
+//20:32B2=7D // TSTAMP_SUB_UNIT_VAL_r_LSB
+//20:32B3=03 // TSTAMP_REF_UNIT_VAL_r_MSB
+//20:32B4=E7 // TSTAMP_REF_UNIT_VAL_r_LSB
+
 20:32B1=00 // TSTAMP_SUB_UNIT_VAL_r_MSB
 20:32B2=7D // TSTAMP_SUB_UNIT_VAL_r_LSB
 20:32B3=03 // TSTAMP_REF_UNIT_VAL_r_MSB
@@ -152,4 +159,4 @@
 //////////////////////////////////////////////////////////////////
 
 20:3091=6C // CCI_ADDRESS_CONTROL_2ND_r
-20:0100=00 // MODE_SELECT_r (Stream on)
+20:0100=01 // MODE_SELECT_r (Stream on)

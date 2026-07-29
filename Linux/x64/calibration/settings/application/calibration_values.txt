@@ -1,0 +1,14 @@
+# Last values entered in DVS_Calibration.
+schema_version=1
+rows=4
+cols=11
+circle_spacing_mm=49.83
+stereo_baseline_mm=
+baseline.dual_device_stereo.delta01_100.delta01_port217_delta-01_hub_-_2_-_port_-_17_-_0x81_1024_bytes_delta01_port220_delta-01_hub_-_2_-_port_-_20_-_0x81_1024_bytes=200
+baseline.dual_device_stereo.delta01_1000.delta01_port217_delta-01_hub_-_2_-_port_-_17_-_0x81_1024_bytes_delta01_port220_delta-01_hub_-_2_-_port_-_20_-_0x81_1024_bytes=200
+baseline.integrated_stereo.delta10_100_stereo.delta10_port219_delta-10_hub_-_2_-_port_-_19_-_0x81_1024_bytes=200.05
+baseline.integrated_stereo.delta10_100_stereo.delta10_port220_delta-10_hub_-_2_-_port_-_20_-_0x81_1024_bytes=253
+baseline.integrated_stereo.delta10_100_stereo.delta10_sn_01bf2648108fdc3f=200.05
+baseline.integrated_stereo.delta10_2000_stereo.delta10_port219_delta-10_hub_-_2_-_port_-_19_-_0x81_1024_bytes=200.05
+baseline.integrated_stereo.delta10_2000_stereo.delta10_port220_delta-10_hub_-_2_-_port_-_20_-_0x81_1024_bytes=200.05
+baseline.integrated_stereo.delta10_2000_stereo.delta10_sn_01bf2648108fdc3f=200.05

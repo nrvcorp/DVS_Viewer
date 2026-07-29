@@ -16,6 +16,8 @@ versions avoids shared-library issues (see Troubleshooting):
 | OS        | **Ubuntu 22.04 LTS** | Ships the expected library versions by default |
 | OpenCV    | **4.5.x** (SONAME `.so.4.5d`) | Provided by `libopencv-dev` on Ubuntu 22.04 |
 | Qt        | **Qt 6** (any 6.x) | Major version must be 6 |
+| Ceres     | **2.0.x** | Provided by `libceres-dev` on Ubuntu 22.04 |
+| HDF5      | **1.10.x** | Provided by `libhdf5-103` on Ubuntu 22.04 |
 | libusb    | **libusb-1.0** (any 1.0.x) | Major version must be 1.0 |
 
 > **Important:** OpenCV encodes the *minor* version into its library name
@@ -39,8 +41,13 @@ sudo apt install -y \
   libusb-1.0-0 \
   libopencv-dev \
   qt6-base-dev \
+  qt6-wayland \
   libqt6svg6 \
   libhdf5-103 \
+  libceres-dev \
+  libgoogle-glog-dev \
+  libgflags-dev \
+  libunwind-dev \
   xdg-utils
 ```
 
@@ -53,7 +60,11 @@ sudo apt install -y nautilus dbus-x11
 ```
 
 - `libqt6svg6` is required for SVG-based UI icons, such as radio buttons and check boxes.
+- `qt6-wayland` lets Qt start automatically in Ubuntu Wayland desktop sessions;
+  `qt6-base-dev` also supplies the XCB platform plugin for X11 sessions.
 - `libhdf5-103` is the HDF5 runtime, required for exporting events to `.h5` files.
+- `libceres-dev`, `libgoogle-glog-dev`, `libgflags-dev`, and `libunwind-dev`
+  provide the solver runtime used by Calibration mode.
 - `xdg-utils` is required for opening save directories from the viewer.
 - `nautilus` is useful when the system does not already provide a Linux file manager.
 - `dbus-x11` can help reduce DBus/GIO warnings in WSL or minimal desktop environments.
@@ -145,7 +156,7 @@ different OpenCV version (for example, Ubuntu 24.04 installs OpenCV 4.6.0). Beca
 OpenCV encodes its minor version into the library name, the viewer fails to start:
 
 ```text
-./DVS_Viewer_FX20: error while loading shared libraries:
+./DVS_Viewer: error while loading shared libraries:
 libopencv_core.so.4.5d: cannot open shared object file: No such file or directory
 ```
 
@@ -154,8 +165,10 @@ Note: the `d` in `4.5d` is Ubuntu 22.04's ABI tag, **not** a debug build.
 **Recommended fix:** use Ubuntu 22.04 LTS, which provides OpenCV 4.5.x
 (`libopencv_core.so.4.5d`) automatically.
 
-**Workaround (other distributions):** OpenCV keeps backward ABI compatibility across
-minor releases, so you can link the installed version to the expected `.4.5d` name.
+**Compatibility workaround (other distributions):** If the installed OpenCV 4.x
+build is ABI-compatible, create compatibility names for every OpenCV module
+required by Viewer and Calibration. This is a best-effort workaround, not a
+replacement for the supported Ubuntu 22.04 environment.
 
 First, check which OpenCV version is actually installed:
 
@@ -163,30 +176,64 @@ First, check which OpenCV version is actually installed:
 
 ```bash
 ldconfig -p | grep libopencv_core
-# e.g. libopencv_core.so.4.6.0  -> the installed version is 4.6.0
+# Example: libopencv_core.so.406 -> OpenCV 4.6 is installed
 ```
 
-Then create the links (replace `4.6.0` with the version reported above):
+Then run the following from the directory containing `DVS_Viewer`. It discovers
+the installed library filenames and creates only the `.4.5d` compatibility
+names under `/usr/local/lib`; it does not modify the packaged OpenCV files:
 
 **Linux Bash**
 
 ```bash
-cd /usr/lib/x86_64-linux-gnu
+opencv_modules=(core imgproc imgcodecs videoio calib3d features2d)
+sudo install -d /usr/local/lib
 
-sudo ln -sf libopencv_core.so.4.6.0      libopencv_core.so.4.5d
-sudo ln -sf libopencv_imgproc.so.4.6.0   libopencv_imgproc.so.4.5d
-sudo ln -sf libopencv_imgcodecs.so.4.6.0 libopencv_imgcodecs.so.4.5d
-sudo ln -sf libopencv_videoio.so.4.6.0   libopencv_videoio.so.4.5d
+for module in "${opencv_modules[@]}"; do
+  expected="libopencv_${module}.so.4.5d"
+
+  if ldconfig -p | awk '{print $1}' | grep -qx "${expected}"; then
+    continue
+  fi
+
+  installed_path=$(
+    ldconfig -p |
+      awk -v prefix="libopencv_${module}.so." -v expected="${expected}" \
+        'index($1, prefix) == 1 && $1 != expected { print $NF; exit }'
+  )
+
+  if [ -z "${installed_path}" ]; then
+    echo "Missing installed OpenCV module: ${module}" >&2
+    exit 1
+  fi
+
+  sudo ln -sfn "${installed_path}" "/usr/local/lib/${expected}"
+done
 
 sudo ldconfig
 ```
 
-Then run the viewer again:
+Verify that Viewer and Calibration dependencies are resolved, then run:
 
 **Linux Bash**
 
 ```bash
+if ldd ./DVS_Viewer | grep -F "not found"; then
+  echo "Unresolved runtime dependencies remain." >&2
+  exit 1
+fi
+
 ./DVS_Viewer
+```
+
+If the loader reports `undefined symbol`, a crash occurs, or Calibration does
+not start, the installed OpenCV build is not compatible enough for this
+workaround. Remove the compatibility links and use Ubuntu 22.04 or rebuild the
+Viewer for that distribution:
+
+```bash
+sudo rm -f /usr/local/lib/libopencv_{core,imgproc,imgcodecs,videoio,calib3d,features2d}.so.4.5d
+sudo ldconfig
 ```
 
 ### UI icons are missing
