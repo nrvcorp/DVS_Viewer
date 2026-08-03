@@ -1,0 +1,9 @@
+# Copy to calibration_values.txt or let the UI create it after the first valid run.
+schema_version=1
+rows=4
+cols=11
+circle_spacing_mm=
+stereo_baseline_mm=
+# Baseline is remembered per stereo camera combination after the first valid run.
+# baseline.integrated_stereo.<profile>.<device>=
+# baseline.dual_device_stereo.<profile>.<device_pair>=
