@@ -74,7 +74,7 @@ In the Settings panel, apply the setting file that matches the device, then veri
 When a camera is selected, the appropriate settings for that camera are loaded automatically. Simply click the Apply button to apply them.
 
 - `Delta_01_1000FPS.txt`: 1000 Frame Rate Setting (Delta-01 Only)
-- `Delta_10_2000FPS.txt`: 300 Frame Rate Setting (Delta-10 Only)
+- `Delta_10_2000FPS_Single.txt`: 2000 Frame Rate Setting (Delta-10 Only)
 
 **Caution: Applying a settings file whose camera name does not match the selected camera may cause an error. If an error occurs, disconnect and reconnect the camera’s USB cable.**
 
@@ -260,6 +260,16 @@ Select the `.dvs` file to convert under Raw File, then specify the destination p
 Currently, only `HDF5 (*.h)` output is supported. Additional export formats will be added in future releases.
 
 Click Export to begin the conversion. You can monitor its status using the progress bar.
+
+#### 5. Calibration
+
+The Calibration menu opens the integrated DVS Calibration workflow for capturing and reviewing circle-grid samples and calculating mono or stereo camera parameters.
+
+When Calibration is selected, DVS Viewer asks for confirmation. Selecting **Yes** stops active saving and streaming, releases the connected camera and USB resources, closes the Viewer window, and restarts the same `DVS_Viewer` program in Calibration mode. Calibration then detects the connected camera again and applies its calibration sensor settings.
+
+Calibration settings are stored under `calibration/settings`. Captured sessions and generated calibration results are stored under `calibration/data`.
+
+Before switching modes, allow any active file save operation to finish when possible. Do not disconnect the camera while Viewer is closing or Calibration is detecting and configuring the sensor.
 
 ## 6. Contact
 

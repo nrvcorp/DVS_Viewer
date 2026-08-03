@@ -1,17 +1,16 @@
 //@ DVS_VERSION S5KRC1S
 
-//@ Single
+//@ Delta-10 2000 FPS
 
 //@ Description S5KRC1S
 
 20:300c=00
 20:30a1=00
 
-20:3070=03 // PLL_P
-20:3071=00 // PLL_M_MSB
-20:3072=9D // PLL_M_LSB
+20:3070=03
+20:3071=00
+20:3072=9D
 20:3073=00 // PLL_S
-
 20:3079=61 // [7:4] PLL_DIV_G , [3:0] PLL_DIV_DBR
 20:307a=11 // [7:4] PLL_DIV_OP, [3:0] PLL_DIV_OS
 20:307b=25 // [7:4] PLL_DIV_VS, [3:0] PLL_DIV_VP
@@ -55,13 +54,13 @@
 
 20:3216=04 // DTAG_SELX_r
 20:3217=02 // DTAG_SENSE_r
-20:3218=0A // DTAG_AY_r
+20:3218=0C // DTAG_AY_r
 20:3219=05 // DTAG_AY_RST_GAP_r
 20:321A=07 // DTAG_APS_RST_r
-20:321C=02 // DTAG_COL_MARGIN_r
+20:321C=04 // DTAG_COL_MARGIN_r
 20:320C=7D // [6] : DTAG_FREE_RUN_MODE_r, [5] : DTAG_MASK_FIRST_FRAME_r, [1] : DTAG_GRST_MODE_r, [0] : DTAG_GH_MODE_r
 20:321D=00 // DTAG_FRM_MAGRIN_r_MSB
-20:321E=02 // DTAG_FRM_MAGRIN_r_LSB : 1LSB x 2^12 x Event Clock period
+20:321E=01 // DTAG_FRM_MAGRIN_r_LSB : 1LSB x 2^12 x Event Clock period
 //////////////////////////////////////////////////////////////////
 //////////////        Analog Setting       ///////////////////////
 //////////////////////////////////////////////////////////////////
@@ -106,7 +105,7 @@
 //////////////////////////////////////////////////////////////////
 //////////////       Slave Mode Setting    ///////////////////////
 //////////////////////////////////////////////////////////////////
-20:3A00=00 // [0] : EXT_SYNC_IN_EN_r
+20:3A00=01 // [0] : EXT_SYNC_IN_EN_r
 20:3A01=01 // [0] : EXT_SYNC_RISING_SEL_r
 20:3A02=00 // [0] : BURST_TRIGGER_MODE_EN_r
 20:3A0C=00 // ECLK_FINE_COUNT_WIDTH_r_MSB
@@ -115,7 +114,7 @@
 20:3A0F=1F // ECLK_COARSE_COUNT_WIDTH_r_LSB (1us / LSB)
 20:3A10=00 // FRAME_WIDTH_r
 20:3283=00 // [0] : DTAG_MULTI_SENSOR_r
-20:303B=40 // [1] : EXT_SYNC_IN_EN_r
+20:303B=02 // [1] : EXT_SYNC_IN_EN_r
 20:32B6=00 // [1] : TSTAMP_EXT_RESET_r
 20:4c00=01 // 
 
@@ -125,4 +124,4 @@
 
 20:3091=6C // CCI_ADDRESS_CONTROL_2ND_r
 
-20:0100=00
+20:0100=01

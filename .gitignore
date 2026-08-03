@@ -4,3 +4,6 @@
 *.dvs
 *.bmp
 *.h5
+# Runtime calibration captures and generated results
+**/calibration/data/*
+!**/calibration/data/.gitkeep
