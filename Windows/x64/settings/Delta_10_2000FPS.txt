@@ -1,6 +1,6 @@
 //@ DVS_VERSION S5KRC1S
 
-//@ Delta-10 2000 FPS
+//@ Single
 
 //@ Description S5KRC1S
 
