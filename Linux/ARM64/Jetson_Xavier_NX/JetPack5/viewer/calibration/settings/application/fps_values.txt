@@ -1,0 +1,39 @@
+# DVS Calibration uses one fixed capture contract for every supported camera:
+# physical sensor timing = 100 FPS, Frame End accumulation = 10 sensor frames,
+# output/save cadence = approximately 10 maps/s, preview presentation = 60 Hz.
+# Hardware families keep separate sensor TXT files because their register maps
+# and startup sequences are not interchangeable.
+default_profile=delta01_100
+
+profile.delta01_100.label=100 FPS / 10-frame accumulation (CX3 / Delta 01)
+profile.delta01_100.sensor_file=../sensor/Delta_01_100FPS.txt
+profile.delta01_100.device_family=delta01
+profile.delta01_100.supported_topologies=mono|dual_device_stereo
+profile.delta01_100.camera_fps=100
+profile.delta01_100.output_fps=10
+profile.delta01_100.preview_fps=60
+profile.delta01_100.save_all_frames=false
+profile.delta01_100.viewer_timing_fps=100
+profile.delta01_100.frame_end_count=10
+
+profile.delta10_100_single.label=100 FPS / 10-frame accumulation (FX10/FX20 mono)
+profile.delta10_100_single.sensor_file=../sensor/Delta_10_100FPS_single.txt
+profile.delta10_100_single.device_family=delta10
+profile.delta10_100_single.supported_topologies=mono|dual_device_stereo
+profile.delta10_100_single.camera_fps=100
+profile.delta10_100_single.output_fps=10
+profile.delta10_100_single.preview_fps=60
+profile.delta10_100_single.save_all_frames=false
+profile.delta10_100_single.viewer_timing_fps=100
+profile.delta10_100_single.frame_end_count=10
+
+profile.delta10_100_stereo.label=100 FPS / 10-frame accumulation (FX20 integrated stereo)
+profile.delta10_100_stereo.sensor_file=../sensor/Delta_10_2000FPS_Stereo.txt
+profile.delta10_100_stereo.device_family=delta10
+profile.delta10_100_stereo.supported_topologies=integrated_stereo
+profile.delta10_100_stereo.camera_fps=100
+profile.delta10_100_stereo.output_fps=10
+profile.delta10_100_stereo.preview_fps=60
+profile.delta10_100_stereo.save_all_frames=false
+profile.delta10_100_stereo.viewer_timing_fps=100
+profile.delta10_100_stereo.frame_end_count=10
