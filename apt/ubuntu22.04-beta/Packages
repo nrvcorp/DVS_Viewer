@@ -1,0 +1,55 @@
+Package: delta-qt6
+Version: 6.2.4-1~ubuntu22.04
+Architecture: amd64
+Maintainer: NRV <sales@nrv.kr>
+Depends: libc6 (>= 2.28), libdbus-1-3 (>= 1.9.14), libegl1, libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.6), libgcc-s1 (>= 3.4), libgl1, libglib2.0-0 (>= 2.26.0), libstdc++6 (>= 10.2), libx11-6, libx11-xcb1 (>= 2:1.7.5), libxcb-glx0, libxcb-icccm4 (>= 0.4.1), libxcb-image0 (>= 0.2.1), libxcb-keysyms1 (>= 0.4.0), libxcb-randr0 (>= 1.3), libxcb-render-util0, libxcb-render0, libxcb-shape0, libxcb-shm0 (>= 1.10), libxcb-sync1, libxcb-xfixes0, libxcb-xkb1, libxcb1 (>= 1.8), libxkbcommon-x11-0 (>= 0.5.0), libxkbcommon0 (>= 0.5.0), zlib1g (>= 1:1.2.11)
+Filename: delta-qt6_6.2.4-1.ubuntu22.04_amd64.deb
+Size: 17912626
+MD5sum: e85443fb9378d4c70019b83cb683f40a
+SHA1: 2f9cefdb10be363e2036f40fde09fb0acc2824fa
+SHA256: 8d2b7d81b89fefc06837b7ab193a7c371d21734fd24e0827822d15a843589091
+Homepage: https://nrv.kr
+Description: Qt 6.2.4 runtime for NRV Delta applications
+
+Package: delta-sdk
+Version: 1.1.0-1~ubuntu22.04
+Architecture: all
+Maintainer: NRV <sales@nrv.kr>
+Depends: libdelta-sdk, delta-qt6, delta-viewer
+Filename: delta-sdk_1.1.0-1.ubuntu22.04_all.deb
+Size: 528
+MD5sum: 0ecd619352143e28ed31f3fe1789b6ac
+SHA1: 67edaea4be21d21e28207237fee01127227b884a
+SHA256: e0e192a61fd97423f7869efd2723d5c1ca3f0aecb7dc14ab6650708992c354b6
+Homepage: https://nrv.kr
+Description: NRV Delta series camera SDK
+
+Package: delta-viewer
+Version: 1.1.0-1~ubuntu22.04
+Architecture: amd64
+Maintainer: NRV <sales@nrv.kr>
+Depends: libdelta-sdk, delta-qt6, libc6 (>= 2.34), libceres2 (>= 2.0.0+dfsg1), libglx0, libgoogle-glog0v5 (>= 0.5.0+really0.4.0), libhdf5-103-1, libopencv-calib3d4.5d (>= 4.5.4+dfsg), libopencv-core4.5d (>= 4.5.4+dfsg), libopencv-features2d4.5d (>= 4.5.4+dfsg), libopencv-imgcodecs4.5d (>= 4.5.4+dfsg), libopencv-imgproc4.5d (>= 4.5.4+dfsg), libopengl0, libstdc++6 (>= 11), libunwind8
+Filename: delta-viewer_1.1.0-1.ubuntu22.04_amd64.deb
+Size: 937534
+MD5sum: 0fb42f6bf8172d90a7d918bb8342acc1
+SHA1: 90920caf188a33cd7fb19f27d97af2448acaf0c5
+SHA256: 514e807fa73d64b4f8e35a53963e2d093a87da155d539b9868d73fc38bf26b04
+Homepage: https://nrv.kr
+Description: Viewer for NRV Delta series cameras
+
+Package: libdelta-sdk
+Version: 1.1.0-1~ubuntu22.04
+Architecture: amd64
+Maintainer: NRV <sales@nrv.kr>
+Installed-Size: 2329
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2), libopencv-calib3d4.5d (>= 4.5.4+dfsg), libopencv-core4.5d (>= 4.5.4+dfsg), libopencv-imgcodecs4.5d (>= 4.5.4+dfsg), libopencv-imgproc4.5d (>= 4.5.4+dfsg), libopencv-videoio4.5d (>= 4.5.4+dfsg), libusb-1.0-0 (>= 2:1.0.9)
+Filename: libdelta-sdk_1.1.0-1.ubuntu22.04_amd64.deb
+Size: 690330
+MD5sum: 3570461f97d990b4700a1afedfbe9bf1
+SHA1: a6c7f9f100fa97ee9681446097cbe5eebe3bcfde
+SHA256: 7d0a2d0b6c637b5021ae97de05f177cb27280035cafcb87d77c94d8888017ef0
+Section: devel
+Priority: optional
+Homepage: https://nrv.kr
+Description: NRV Delta series camera library and headers
+

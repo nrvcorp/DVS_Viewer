@@ -1,0 +1,18 @@
+Architectures: amd64 arm64
+Codename: focal
+Date: Thu, 03 Sep 2026 06:59:25 +0000
+Label: DELTA SDK
+Origin: NRV
+Suite: beta
+MD5Sum:
+ 10fd9ca099434d793b84ef3da5179ec7             6092 Packages
+ 792a925b3d53fc99f1031ab0874dfc06             2199 Packages.gz
+SHA1:
+ 302974f4472a91bbb6936fa2f630528661cb2ccc             6092 Packages
+ c0e4d93acd1b8f8c6364712d762ca467875b850a             2199 Packages.gz
+SHA256:
+ 74d9c3a7499c1e138054a89b6f4dab023daa09adbc40cee5e1410767aa4031ad             6092 Packages
+ 8cffcf96d3c790dd10ee3c6408459764dc1bf6e56f6947ee5ebb7c306414c17c             2199 Packages.gz
+SHA512:
+ 784991ac7849cd7fa2ed1cce93e4bfd081ed012fefc0e0aa90c137bc92b5f575fb32f48a5244cdd716e195f00e9a6b5fa0e77c875193938143ab4c86b7d3ad96             6092 Packages
+ 82d8a6df6b3e6793d04e9f1b26681486ac8ac85aea1799377ffec6bb5b6d232afc2c3ecc1921dc6c4cd6bba189469457d4c26ad7b98e2cb0c814c53d06b9a694             2199 Packages.gz

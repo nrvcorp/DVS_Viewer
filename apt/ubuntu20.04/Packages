@@ -1,0 +1,130 @@
+Package: delta-qt6
+Version: 6.2.4-1~ubuntu20.04
+Architecture: amd64
+Maintainer: NRV <sales@nrv.kr>
+Depends: libc6 (>= 2.28), libdbus-1-3 (>= 1.9.14), libegl1, libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.6), libgcc-s1 (>= 3.4), libgl1, libglib2.0-0 (>= 2.26.0), libstdc++6 (>= 7), libx11-6, libx11-xcb1 (>= 2:1.6.9), libxcb-glx0, libxcb-icccm4 (>= 0.4.1), libxcb-image0 (>= 0.2.1), libxcb-keysyms1 (>= 0.4.0), libxcb-randr0 (>= 1.3), libxcb-render-util0, libxcb-render0, libxcb-shape0, libxcb-shm0 (>= 1.10), libxcb-sync1, libxcb-xfixes0, libxcb-xkb1, libxcb1 (>= 1.8), libxkbcommon-x11-0 (>= 0.5.0), libxkbcommon0 (>= 0.5.0), zlib1g (>= 1:1.2.11)
+Filename: delta-qt6_6.2.4-1.ubuntu20.04_amd64.deb
+Size: 15857012
+MD5sum: 24fcfd577270ed9aa921a13ddad8a1bd
+SHA1: 181d95c0f12cdf19860ebb56ee2cf10551e3004f
+SHA256: 572db0c794b33c9118e098810dfc5968620447d5efb8f224ff126eaa44fb110a
+Homepage: https://nrv.kr
+Description: Qt 6.2.4 runtime for NRV Delta applications
+
+Package: delta-sdk
+Version: 1.1.0-1~ubuntu20.04
+Architecture: all
+Maintainer: NRV <sales@nrv.kr>
+Depends: libdelta-sdk, delta-qt6, delta-viewer
+Filename: delta-sdk_1.1.0-1.ubuntu20.04_all.deb
+Size: 720
+MD5sum: 462d78f44f7e1b5eb99b28e71d4667be
+SHA1: e101dc7f46a48459f972d2982e26227fb66a40a5
+SHA256: 7a52ba7349aa0173b2df7cc757e834283e6d7c7d3b5a6a3515e4c2731cec70bf
+Homepage: https://nrv.kr
+Description: NRV Delta series camera SDK
+
+Package: delta-viewer
+Version: 1.1.0-1~ubuntu20.04
+Architecture: amd64
+Maintainer: NRV <sales@nrv.kr>
+Depends: libdelta-sdk, delta-qt6, libc6 (>= 2.14), libceres1, libgcc-s1 (>= 3.0), libglx0, libhdf5-103, libopencv-calib3d4.2 (>= 4.2.0+dfsg), libopencv-core4.2 (>= 4.2.0+dfsg), libopencv-features2d4.2 (>= 4.2.0+dfsg), libopencv-imgcodecs4.2 (>= 4.2.0+dfsg), libopencv-imgproc4.2 (>= 4.2.0+dfsg), libopengl0, libstdc++6 (>= 9)
+Filename: delta-viewer_1.1.0-1.ubuntu20.04_amd64.deb
+Size: 852712
+MD5sum: 132b5f90dd7e6689b161be70f751ea3e
+SHA1: 6d1049e3ea844e063a1668c07b69bb25dd0a69a1
+SHA256: e0cdde100bff40dc4fedfb9831d93a84a3a531c6e3f5fe9704ba19f232c980ed
+Homepage: https://nrv.kr
+Description: Viewer for NRV Delta series cameras
+
+Package: libdelta-sdk
+Version: 1.1.0-1~ubuntu20.04
+Architecture: amd64
+Maintainer: NRV <sales@nrv.kr>
+Installed-Size: 2397
+Depends: libc6 (>= 2.17), libgcc-s1 (>= 4.2), libopencv-calib3d4.2 (>= 4.2.0+dfsg), libopencv-core4.2 (>= 4.2.0+dfsg), libopencv-imgcodecs4.2 (>= 4.2.0+dfsg), libopencv-imgproc4.2 (>= 4.2.0+dfsg), libopencv-videoio4.2 (>= 4.2.0+dfsg), libusb-1.0-0 (>= 2:1.0.9)
+Filename: libdelta-sdk_1.1.0-1.ubuntu20.04_amd64.deb
+Size: 708994
+MD5sum: 5c8801bd97b2595b3c81d38518b471d8
+SHA1: 2fb005a4220ee1eb72f3963a1b765cabef054934
+SHA256: f6df31cedb589fc2fc20583729f2d24e018ac4a7ec007fc4ecbf8839c3e33af3
+Section: devel
+Priority: optional
+Homepage: https://nrv.kr
+Description: NRV Delta series camera library and headers
+
+Package: ros-noetic-delta
+Version: 1.1.0-0focal
+Architecture: all
+Maintainer: NRV <sales@nrv.kr>
+Depends: ros-noetic-delta-driver, ros-noetic-delta-tools
+Filename: ros-noetic-delta_1.1.0-0focal_all.deb
+Size: 728
+MD5sum: e268a04c045f2c922850f56c89acd8cc
+SHA1: e142209af7e343a7b61bf4ea38ac6675d9f2a755
+SHA256: 92c1f2dcb6edf9a8a66afc436ebe6df1a96d2020da097f0837a6526f75687b6e
+Homepage: https://nrv.kr
+Description: NRV Delta series camera ROS1 packages
+
+Package: ros-noetic-delta-driver
+Version: 1.1.0-0focal
+Architecture: amd64
+Maintainer: NRV <harold2232@snu.ac.kr>
+Installed-Size: 236
+Depends: libc6 (>= 2.14), libconsole-bridge0.4, libgcc-s1 (>= 3.0), libstdc++6 (>= 4.1.1), libdelta-sdk, ros-noetic-event-camera-msgs, ros-noetic-nodelet, ros-noetic-roscpp
+Filename: ros-noetic-delta-driver_1.1.0-0focal_amd64.deb
+Size: 51012
+MD5sum: 4869f194edff646be1e867de74831e07
+SHA1: 4609034a378031ec075e00ca8f51d4af04917292
+SHA256: 7280b0a3be83129ba8479adf901f2ec9ff497710af33ce8c1134573eb7f9526d
+Section: misc
+Priority: optional
+Description: NRV Delta event camera driver publishing event_camera_msgs/EventPacket, compatible with the ros-event-camera ecosystem.
+ Builds for both ROS1 and ROS2 from the same sources.
+
+Package: ros-noetic-delta-tools
+Version: 1.1.0-0focal
+Architecture: amd64
+Maintainer: NRV <harold2232@snu.ac.kr>
+Installed-Size: 320
+Depends: libc6 (>= 2.14), libconsole-bridge0.4, libgcc-s1 (>= 3.4), libstdc++6 (>= 5.2), ros-noetic-event-camera-codecs, ros-noetic-event-camera-msgs, ros-noetic-nodelet, ros-noetic-rosbag, ros-noetic-roscpp, ros-noetic-rospy, ros-noetic-sensor-msgs, ros-noetic-std-srvs
+Filename: ros-noetic-delta-tools_1.1.0-0focal_amd64.deb
+Size: 67388
+MD5sum: 9fa406d3af709d1c7b8e020322a2f2b1
+SHA1: 426fb9dc6e8072c616c57f87b92702282599c424
+SHA256: b2d6fb3ca74c3a297a97065d74fd8a7d58e9afe9c51635bebe8436e89aaa89f9
+Section: misc
+Priority: optional
+Description: Inspection tools for NRV Delta event streams.
+ Contains a renderer that keeps a live view current by dropping the backlog rather than queueing it. Depends only on the shared event_camera packages, never on the DELTA SDK.
+
+Package: ros-noetic-event-camera-codecs
+Version: 1.0.0-0focal
+Architecture: amd64
+Maintainer: Bernd Pfrommer <bernd.pfrommer@gmail.com>
+Installed-Size: 219
+Depends: libc6 (>= 2.4), libgcc-s1 (>= 3.4), libstdc++6 (>= 5.2), ros-noetic-event-camera-msgs, ros-noetic-ros-environment
+Filename: ros-noetic-event-camera-codecs_1.0.0-0focal_amd64.deb
+Size: 36632
+MD5sum: b417bef3425c4eb1fe8f70fab958b07b
+SHA1: b152c8213b9266c3914117fb3608fd43cd44cb39
+SHA256: 4df5d8af0dab0912fb7c3ed16f63ec296cafa4a73715ec84f691a03dc95253eb
+Section: misc
+Priority: optional
+Description: package to encode and decode event_camera_msgs
+
+Package: ros-noetic-event-camera-msgs
+Version: 2.0.1-0focal
+Architecture: amd64
+Maintainer: Bernd Pfrommer <bernd.pfrommer@gmail.com>
+Installed-Size: 121
+Depends: ros-noetic-message-runtime, ros-noetic-std-msgs
+Filename: ros-noetic-event-camera-msgs_2.0.1-0focal_amd64.deb
+Size: 16956
+MD5sum: 1ee64582f3b2eca04bf711828bcbe4c2
+SHA1: 789efa5f456460b395832c230071a9fbecb0312b
+SHA256: 3bd84460121ff10d32d19f22414981cec8fddb7ec4412506747ff2d0b13bbae5
+Section: misc
+Priority: optional
+Description: messages for event based cameras
+

@@ -1,0 +1,38 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: amd64 arm64
+Codename: jammy
+Date: Tue, 01 Sep 2026 07:37:12 +0000
+Label: DELTA SDK
+Origin: NRV
+Suite: stable
+MD5Sum:
+ bc716fcccb8f944badabeeb1a8dd3df5             2914 Packages
+ da32e3f39eecf9d31f9f9d25aada03fb             1171 Packages.gz
+SHA1:
+ b2b8af8e884a17c8533e3c44623f39f753be4718             2914 Packages
+ 2b6f08e6e02cb165c2319ab6edde590c42bc4c94             1171 Packages.gz
+SHA256:
+ 69a326153d4ef2fb44b6c67f17cb960c93e4dba69279bfaf255db972a7bd64b9             2914 Packages
+ 5b90797f58260ff8ef3296af7dc7463a90404a61f5c0cc29ef2d7a7eb65b4cd4             1171 Packages.gz
+SHA512:
+ 44b4530381fc81a0fc1f7ffd7ad7145be8fb63efb259c2d6ee9711ad9aa43c8869aac1b4fb4f890bde0c91421c21bf8e07aab4ad8f68121288ea6ace2ef46d09             2914 Packages
+ 3947067c139ea6fae163e2ebc1b2fae51c0f567d9e784123c35efa94ea5ea94518ab868e0c52182031d694b798032051ea8ec713fb8ea7d6b2013870b21aa13b             1171 Packages.gz
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEZvNDhDXcFvRA/c1NX40Oy7iE0gkFAmqWgKkACgkQX40Oy7iE
+0gknNw//SJDdDXkDj0j+0244I14V0HyZu+DiBGr4VA2A1ULjvxanEt5J6HAstjOs
+u8YvEP8gP8DCTBqwhwGLgDf6iqWSjcH42XniTK+5CHOa/4Gs2ka5bh4JVM30wpZo
+FIZX7hgJFO+Wgwp363uzpph2zeupbfnokK/RuVQrdOPaptoOq8iFT2kuHXAZGi1M
+vWV+4u2+gVKc/1CsAVJfVE2heFxoI4MxZU57gatsLfQcBSp756Yr9mcwmpYWRQJ1
+iXEytArbosZJK9TUibym0ZaPLTtmLGnimvRpMHXxlHnnPJiITfYcnP9yWLA2cQXW
+piXTXsxEgR6LH1oIMeYGvaSMsgxY2iCQ0MTuy1Xhd19z7P6TH8Dx6aYURkO0mV9g
+VcdVQaMDk0KfMx7UpZ3E480JIlOh552l892ZeUxunSJ/Dc6PSjcJu+uoBgIVbqeC
+/28mLg0+Lx+pm/2aONLJGZ8HfqqR7aNeddvoaL6Xr+D9qVBrGPb7ZdgLj6vTws7B
+KK8y5u8fL9U+UBIjX3Q/fIAYLXLocte+QX3lI95X8URGnbgwlEYVFRSjzJd4lfkc
+VvdSLewEe5w8bLS/3L4JnogJew9xPArw4vonx1etySFZAmFhB+HPdicOvJ8nkfnu
+q4Inx+4JUp18q3tWz6RBzP4ySTYwok2ol2HvALJgd+tKBFuWO7M=
+=3iih
+-----END PGP SIGNATURE-----
